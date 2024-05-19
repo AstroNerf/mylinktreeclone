@@ -1,0 +1,330 @@
+/* ---------- BASIC TAGS ----------- */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
+body {
+    background-color: #FEFEFE;
+    max-height: 100vh;  /* toute la taille de l'écran définie en vh */
+    margin: 0; /* pour s'assurer que aucune marge ne soit pré-installer par défault */
+    padding: 0; /* pour s'assurer que aucune marge ne soit pré-installer par défault */
+    
+}
+
+a {
+    color: black;
+    text-decoration: none; /* on ne veut pas d'animation de base et choisir la notre */
+    animation: none !important; /* on ne veut pas d'animation de base et choisir la notre */
+    transition: none !important; /* on ne veut pas d'animation de base et choisir la notre */
+    
+}
+
+h1 {
+    color: #253529;
+    font-size: calc(1.2rem + 1.5vw);
+    letter-spacing: 4px;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Bungee Hairline", sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: calc(1.2rem + 2.0vw);
+    color: #1A1110;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-align: center;
+    font-family: "Bungee Outline", sans-serif;
+    font-style: normal;
+    line-height: 0px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------- CUSTOM TAGS ----------- */
+.cubes-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cube {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 56px;
+    height: 9px;
+    background-color: aqua;
+}
+
+.cube:nth-child(1) {
+    background-color: #CE42FF;
+}
+
+.cube:nth-child(2) {
+    background-color: #FF42D5;
+}
+
+.cube:nth-child(3) {
+    background-color: #46FF42;
+}
+
+.cube:nth-child(4) {
+    background-color: #FF6442;
+}
+
+.cube:nth-child(5) {
+    background-color: #FFBF42;
+}
+
+.cube:nth-child(6) {
+    background-color: #FBFF42;
+}
+
+.warning-image-container {
+    width: 15rem;
+    height: 15rem;
+    animation: floatDown 8s ease-in-out infinite;
+}
+
+.warning-image {
+  width: 100%;
+}
+
+.warning-texts-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
+    justify-content: center;
+    align-items: center;
+}
+
+.warning-texts-background {
+    background-color: black;
+    width: max-content;
+    height: fit-content;
+    box-shadow: 13px 15px 0px -7px grey;
+    transform: rotate(-5deg);
+}
+
+.warning-text {
+    font-family: "Bungee Hairline", sans-serif;
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.left {
+    margin-right: 10rem;
+}
+
+.right{
+    margin-left: 10rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+/* -----  IMAGE CONTAINER ----- */
+/* on manipule le container pour ajuster la taille de l'image pas l'inverse */
+.image-container {
+    width: 100%;
+    max-width: 10rem;
+    height: 10rem;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    box-shadow: 7.2px 8px 0px -4px black;
+}
+
+/* on demande à l'image de remplir le container: c'est plus stable */
+.image-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* -----  TEXTS CONTAINER ----- */
+/* inversion du H1 & H2 en fonction de l'importance des mots clés */
+.texts-container {
+    display: flex;
+    flex-direction: column-reverse;
+    /* inversion des éléments h1&h2 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----  LINKS CONTAINER ----- */
+
+.button-container,
+.button-link,
+.button-icon,
+.button-text,
+.button-icon svg {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button-main {
+    background-color: #D9D9D9;
+    padding: 5px 0px;
+    border: 2px black solid;
+    max-width: 30rem;
+    min-width: 17rem;
+    height: 2.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 13px 15px 0px -7px black;
+    transition: background-color 0.3s ease;
+}
+
+.button-main:active {
+    background-color: #CE42FF;
+}
+
+.button-icon {
+    margin-left: 1rem;
+}
+
+.button-icon svg {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #FEC1E2;
+    border: 1px black solid;
+    box-shadow: 3.2px 2px 0px black;
+    /* margin-left: -2rem; */
+}
+
+.button-text {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Bruno Ace", sans-serif;
+}
+
+.custom-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.credits {
+    font-family: "Bungee Hairline", sans-serif;
+    color: #253529;
+    padding: 1rem;
+}
+
+
+
+
+
+/* ----- RESPONSIVE CONTENT BASÉ SUR LA TAILLE DE L'ÉCRAN -------*/
+/* définir la logique de base: le contenu DESKTOP est visible - contenu MOBILE non-visible  */
+.desktop-content {
+    display: block; /* visible */
+}
+
+.mobile-content {
+    display: none; /* non-visible */
+}
+
+/* définir media-queries pour afficher le contenu mobile pour 361px et moins. */
+@media screen and (max-width: 767px) {
+    .desktop-content {
+        display: none; /* non-visible */
+    }
+
+    .mobile-content {
+        display: block; /* visible */
+    }
+}
+
+
+/* --- ANIMATIONS BOUTONS ---- */
+/* keyframes pour animation */
+@keyframes click-animation {
+    0% {
+        background-color: #004080;
+    }
+    100% {
+        background-color: #007bff;
+    }
+}
+
+/* Apply the animation when the button is active */
+.animated-button:active {
+    animation: click-animation 0.3s forwards;
+}
+
+/* Adding focus styles for accessibility */
+.animated-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
